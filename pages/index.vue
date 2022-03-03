@@ -1,9 +1,5 @@
 <template>
-  <div class="div">
-    <Section />
-    teste
-    <p></p>
-  </div>
+  <Section />
 </template>
 
 <script lang="ts">
