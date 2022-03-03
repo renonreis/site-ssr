@@ -12,7 +12,12 @@ export default {
   },
 
   // Global CSS: https://go.nuxtjs.dev/config-css
-  css: ['@/assets/scss/main.scss'],
+  css: [
+    {
+      src: '@/assets/scss/main.scss',
+      lang: 'sass',
+    },
+  ],
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
   plugins: [],
@@ -34,7 +39,18 @@ export default {
     '@nuxtjs/pwa',
     // https://go.nuxtjs.dev/content
     '@nuxt/content',
+    // https://github.com/nuxt-community/style-resources-module
+    '@nuxtjs/style-resources',
   ],
+
+  // styleResources
+  styleResources: {
+    scss: [
+      './assets/scss/global/*.scss',
+      './assets/scss/global/custom/*.scss',
+      './assets/scss/global/colors/*.scss',
+    ],
+  },
 
   // Specify module rules for css and scss
   module: {
