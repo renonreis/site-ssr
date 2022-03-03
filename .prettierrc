@@ -1,4 +1,17 @@
 {
-  "semi": false,
-  "singleQuote": true
+  "arrowParens": "always",
+  "bracketSameLine": true,
+  "bracketSpacing": true,
+  "htmlWhitespaceSensitivity": "strict",
+  "overrides": [
+    {
+      "files": "*.hbs",
+      "options": {
+        "singleQuote": false
+      }
+    }
+  ],
+  "semi": true,
+  "singleQuote": true,
+  "trailingComma": "all"
 }

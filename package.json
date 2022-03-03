@@ -2,6 +2,10 @@
   "name": "site-ssr",
   "version": "1.0.0",
   "private": true,
+  "engines": {
+    "npm": ">=8.0.0",
+    "node": ">=16.0.0"
+  },
   "scripts": {
     "dev": "nuxt",
     "build": "nuxt build",
@@ -12,7 +16,11 @@
     "lint": "yarn lint:js && yarn lint:prettier",
     "lintfix": "prettier --write --list-different . && yarn lint:js --fix",
     "prepare": "husky install",
-    "test": "jest"
+    "create-component": "plop create-component",
+    "create-page": "plop create-page",
+    "test": "jest",
+    "test:watch": "jest --watchAll",
+    "test:coverage": "jest --coverage"
   },
   "lint-staged": {
     "*.{js,ts,vue}": "eslint --cache",
@@ -45,6 +53,7 @@
     "husky": "^7.0.4",
     "jest": "^27.4.4",
     "lint-staged": "^12.1.2",
+    "plop": "^3.0.5",
     "prettier": "^2.5.1",
     "ts-jest": "^27.1.1",
     "vue-jest": "^3.0.4"
